@@ -2,3 +2,6 @@ statefulset:
   version: 1.0.0
   storage: 1Gi
   replicas: 3
+  image:
+    repository: mysql
+    tag: "8.0"
