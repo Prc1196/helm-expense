@@ -1,4 +1,4 @@
-# Headless service, normal service
+# Headless service, normal service, StatefulSet
 apiVersion: v1
 kind: Service
 metadata:
