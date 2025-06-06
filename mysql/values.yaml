@@ -1,4 +1,9 @@
 statefulset:
-  verison: 1.0.0
+  verison: 1.0.0  
   storage: 1Gi
   replicas: 3
+
+image:
+  repository: prc1196/mysql
+  tag: latest    # Use a valid tag like 'latest' or '8.0'
+  pullPolicy: IfNotPresent
