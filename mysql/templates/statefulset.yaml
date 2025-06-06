@@ -6,27 +6,27 @@ metadata:
 spec:
   selector:
     matchLabels:
-      app: mysql # has to match .spec.template.metadata.labels
+      app: mysql
       project: expense
-      tier: db
+      tier: db # has to match .spec.template.metadata.labels
   serviceName: "mysql-headless"
   replicas: {{ .Values.statefulset.replicas }} # by default is 1
   minReadySeconds: 10 # by default is 0
   template:
     metadata:
       labels:
-        app: mysql # has to match .spec.template.metadata.labels
+        app: mysql
         project: expense
-        tier: db
+        tier: db # has to match .spec.selector.matchLabels
     spec:
       terminationGracePeriodSeconds: 10
       containers:
       - name: mysql
-        image: "prc1196/mysql:{{ .Values.statefulset.version }}"
+        image: prc1196/mysql:{{ .Values.statefulset.version }}
         volumeMounts:
         - name: mysql
           mountPath: /var/lib/mysql
-  #instead of creating a PVC resource, you can directly provide in statefulset
+  # Instead of creating a PVC resource, you can directly provide in statefulset
   volumeClaimTemplates:
   - metadata:
       name: mysql

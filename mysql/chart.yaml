@@ -1,5 +1,5 @@
 apiVersion: v2
-name: MysQL
-version: 1.0.0   #chat verison
-description: This is MysQL deployment
-appVersion: 1.o.0 # MysQL app version
+name: mysql
+version: 1.0.0 # chart version
+description: This is MySQL deployment
+appVersion: 1.0.0 # mysql app version
