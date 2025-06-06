@@ -22,8 +22,7 @@ spec:
       terminationGracePeriodSeconds: 10
       containers:
       - name: mysql
-        image: "{{ .Values.image.repository }}:{{ .Values.image.tag }}"
-        imagePullPolicy: "{{ .Values.image.pullPolicy }}"
+        image: prc1196/mysql:{{ .Values.statefulset.version }}
         volumeMounts:
         - name: mysql
           mountPath: /var/lib/mysql

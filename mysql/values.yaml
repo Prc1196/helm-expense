@@ -3,7 +3,3 @@ statefulset:
   storage: 1Gi
   replicas: 3
 
-image:
-  repository: prc1196/mysql
-  tag: latest    # Use a valid tag like 'latest' or '8.0'
-  pullPolicy: IfNotPresent
